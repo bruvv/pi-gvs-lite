@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "verify": {
+    "commands": null,
+    "timeoutMs": 120000,
+    "maxAutoRetries": 3,
+    "outputMaxChars": 12000
+  },
+  "ledger": {
+    "goalMaxChars": 6000,
+    "planMaxChars": 4000,
+    "findingsMaxChars": 8000
+  },
+  "stuck": {
+    "sameFailureThreshold": 2,
+    "hardStopThreshold": 3
+  }
+}

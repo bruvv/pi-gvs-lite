@@ -1,0 +1,53 @@
+{
+  "name": "pi-gvs-lite",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Minimal verifier, stuck guard, persistent workspace ledger, and curated notes for Pi Coding Agent.",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi-coding-agent",
+    "coding-agent",
+    "verifier"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/gvs-lite/index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm test && npm run typecheck"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "latest",
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  },
+  "author": "bruvv",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bruvv/pi-gvs-lite.git"
+  },
+  "homepage": "https://github.com/bruvv/pi-gvs-lite#readme",
+  "bugs": {
+    "url": "https://github.com/bruvv/pi-gvs-lite/issues"
+  },
+  "files": [
+    "extensions",
+    "example",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
